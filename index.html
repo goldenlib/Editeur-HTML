@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Editeur en temps réel</title>
+				<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<script src="main.js"></script>
+        <style>
+        *{
+                padding: 0;
+                margin: o;
+				background: #00ccff;
+        }
+        .main{
+            width: 100%;
+            height: 100%;
+            display: inline-flex;
+        }
+        #editor-textarea{
+            width: 100%;
+            height: 95%;
+            margin: 10px;
+            padding: 5px;
+        }
+		textarea {
+            background: #d4d4d4;
+            color: #1f231f;
+            text-shadow: 0px 0px 5px whitesmok;
+        }
+        #viewer{
+            background: white;
+            border: none;
+            width: 100%;
+            height: 95%;
+            margin: 10px;
+            border: 1px solid #3498db;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <textarea id="editor-textarea" onkeyup="update();refresh()" placeholder="Commencer à coder ici..."></textarea>
+            <iframe id="viewer"></iframe>
+        </div>
+    </body>
+</html>
